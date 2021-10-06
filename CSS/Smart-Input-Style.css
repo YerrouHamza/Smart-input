@@ -1,0 +1,479 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(-20deg , rgb(188, 231, 139), rgb(255, 189, 8));
+    perspective: 800px;
+    -moz-perspective: 800px;
+}
+
+
+/* styling for Card Fleb */
+
+.input-card-fleb{
+    background-image: linear-gradient(120deg , rgb(188, 231, 139), rgb(255, 189, 8));
+    height: 400px;
+    width: 300px;
+    padding: 30px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px 1px rgba(145, 144, 144, 0.5);
+    position: relative;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transition:all 1s ease;
+}
+
+.input-card-fleb.fleb{
+    transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+}
+
+.head-sing_in{
+    position: absolute;
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    z-index: 2;
+}
+
+.back-sing_up{
+    position: absolute;
+    transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    z-index: 1;
+}
+
+
+
+
+
+/* Styling For Front Fleb Card " Sing In " */
+.user-name,
+.password{
+    position: relative;
+}
+
+
+    .sing_in-header{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        padding: 20px 0 20px 0;
+        margin-bottom: 50px;
+        border-bottom: 1px solid white;
+    }
+
+    /* styling For UserName Input */
+
+    .user-name{
+        margin-bottom: 25px;
+    }
+    .user-name input{
+        font-size: 1.2rem;
+        width: 250px;
+        height: 35px;
+        padding-left: 32px;
+        padding-right: 32px;
+        border: 1.8px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        outline: none;
+        transition:all 0.5s;
+
+    }
+        .user-name input:hover{
+            border: 1.8px solid rgba(54, 87, 235, 0.7);
+        }
+        .user-name input:focus{
+            border: 1.8px solid rgba(54, 87, 235, 0.8);
+        }
+        .user-name input:valid{
+            border: 1.8px solid rgb(54, 87, 235);
+        }
+
+    .user-name .icon-uis{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        cursor: text;
+    }
+        .user-name input:valid ~ .icon-uis{
+            color: rgba(29, 66, 230, 0.7);
+        }
+
+    .user-name .cound{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+        padding-left: 5px;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 6px;
+        right: 6px;
+    }
+        .user-name input:valid ~ .cound{
+            color: rgba(29, 66, 230, 0.9);
+        }
+
+
+    /* Styling For PassWord Input */
+
+    .password input{
+        font-size: 1.2rem;
+        width: 250px;
+        height: 35px;
+        padding-left: 32px;
+        padding-right: 32px;
+        border: 1.8px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        outline: none;
+        transition:all 0.5s;
+
+    }
+        .password input:hover{
+            border: 1.8px solid rgba(54, 87, 235, 0.7);
+        }
+        .password input:focus{
+            border: 1.8px solid rgba(54, 87, 235, 0.8);
+        }
+        .password input.active{
+            border: 1.8px solid rgb(54, 87, 235);
+        }
+        .password input.error{
+            border: 1.8px solid rgb(235, 54, 54);
+        }
+
+    .password .icon-password{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        cursor: text;
+    }
+        .password input:valid ~ .icon-password.no{
+            color: rgba(29, 66, 230, 0.7);
+        }
+
+    .password .cound-password{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+        padding-left: 5px;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 6px;
+        right: 6px;
+    }
+        .cound-password.active,
+        .icon-password.active{
+            color: rgba(29, 66, 230, 0.9);
+        }
+        .cound-password.error,
+        .icon-password.error{
+            color: rgba(230, 29, 29, 0.8);
+        }
+
+
+
+
+    /* Styling For Sing In Button */
+
+    .btn-sing_in{
+        font-size: 1.25rem;
+        text-align: center;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+        color: rgba(255, 255, 255);
+        background-color: rgb(8, 141, 230);
+        width: 180px;
+        height: 45px;
+        margin: 40px 15% 0px 15%;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+        .btn-sing_in:hover{
+            color: rgb(8, 141, 230);
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+    .btn-sing_in.disbled{
+        opacity: .6;
+        pointer-events: none;
+    }
+
+        .btn-icon{
+            color: rgb(8, 141, 230);
+            display: none;
+        }
+        .btn-sing_in:hover > .btn-icon{
+            display: unset;
+        }
+
+
+    /* Styling For Main Text */
+
+    .main-text-front{
+        font-size: 1rem;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+        margin-top: 35px;
+    }
+    .main-text-front a{
+        color: rgb(0, 110, 255);
+    }
+    .main-text-front a:hover {
+        text-decoration: underline;
+    }
+
+
+
+
+
+
+/* Styling For Back Fleb Card " Sing Up " */
+.back-sing_up{
+    text-align: center;
+}
+
+.sing_up-header{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    padding: 15px 0 15px 0;
+    margin-bottom: 35px;
+    border-bottom: 1px solid white;
+}
+
+
+    /* styling For Back Flep Card  UserName Input */
+.back-user-name,
+.back-password{
+    position: relative;
+}
+
+    .back-user-name{
+        margin-bottom: 5px;
+    }
+    .back-user-name input{
+        font-size: 1.2rem;
+        width: 260px;
+        height: 35px;
+        margin-bottom: 15px;
+        padding-left: 32px;
+        padding-right: 32px;
+        border: 1.8px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        outline: none;
+        transition:all 0.5s;
+
+    }
+        .back-user-name input:hover{
+            border: 1.8px solid rgba(54, 87, 235, 0.7);
+        }
+        .back-user-name input:focus{
+            border: 1.8px solid rgba(54, 87, 235, 0.8);
+        }
+        .back-user-name input:valid{
+            border: 1.8px solid rgb(54, 87, 235);
+        }
+
+    .back-user-name .back-icon-uis{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 3px;
+        left: 4px;
+        cursor: text;
+    }
+        .back-user-name input:valid ~ .back-icon-uis{
+            color: rgba(29, 66, 230, 0.7);
+        }
+
+    .back-user-name .back-cound{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+        padding-left: 5px;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 6px;
+        right: 5px;
+    }
+        .back-user-name input:valid ~ .back-cound{
+            color: rgba(29, 66, 230, 0.9);
+        }
+
+
+        /* Styling For Back Flep Card Email Input */
+    .back-email{
+        position: relative;
+    }
+
+    .back-email input{
+        font-size: 1.2rem;
+        width: 260px;
+        height: 35px;
+        margin-bottom: 20px;
+        padding-left: 32px;
+        padding-right: 32px;
+        border: 1.8px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        outline: none;
+        transition:all 0.5s;
+    }
+        .back-email input:hover{
+            border: 1.8px solid rgba(54, 87, 235, 0.7);
+        }
+        .back-email input:focus{
+            border: 1.8px solid rgba(54, 87, 235, 0.8);
+        }
+        .back-email input.active{
+            border: 1.8px solid rgb(54, 87, 235);
+        }
+        
+    .back-email .back-icon-email{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.4rem;
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        cursor: text;
+    }
+        .back-icon-email.active{
+            color: rgba(29, 66, 230, 0.7);
+        }
+
+        /* Styling For Back Flep Card PassWord Input */
+
+    .back-password input{
+        font-size: 1.2rem;
+        width: 260px;
+        height: 35px;
+        padding-left: 32px;
+        padding-right: 32px;
+        border: 1.8px solid rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        background-color: rgba(255, 255, 255, 0.6);
+        outline: none;
+        transition:all 0.5s;
+    }
+        .back-password input:hover{
+            border: 1.8px solid rgba(54, 87, 235, 0.7);
+        }
+        .back-password input:focus{
+            border: 1.8px solid rgba(54, 87, 235, 0.8);
+        }
+        .back-password input.active{
+            border: 1.8px solid rgb(54, 87, 235);
+        }
+        .back-password input.error{
+            border: 1.8px solid rgb(235, 54, 54);
+        }
+
+    .back-password .back-icon-password{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.5rem;
+        position: absolute;
+        top: 3px;
+        left: 5px;
+        cursor: text;
+    }
+        .back-password input:valid ~ .back-icon-password.no{
+            color: rgba(29, 66, 230, 0.7);
+        }
+
+    .back-password .back-cound-password{
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.2rem;
+        padding-left: 5px;
+        border-left: 1px solid rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 6px;
+        right: 6px;
+    }
+        .back-cound-password.active,
+        .back-icon-password.active{
+            color: rgba(29, 66, 230, 0.9);
+        }
+        .back-cound-password.error,
+        .back-icon-password.error{
+            color: rgba(230, 29, 29, 0.8);
+        }
+
+
+
+
+    /* Styling For Sing Up Button*/
+.btn-sing_up{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif ;
+    font-size: 1.25rem;
+    text-align: center;
+    color: rgba(255, 255, 255);
+    background-color: rgb(8, 141, 230);
+    width: 180px;
+    height: 45px;
+    margin: 30px 15% 0px 15%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+    .btn-sing_up:hover{
+        color: rgb(8, 141, 230);
+        background-color: rgba(255, 255, 255, 0.6);
+    }
+
+.btn-sing_up.disbled{
+    opacity: .6;
+    pointer-events: none;
+}
+
+    .btn-sing_up .btn-icon{
+        color: rgb(8, 141, 230);
+        display: none;
+    }
+    .btn-sing_up:hover > .btn-icon{
+        display: unset;
+    }
+
+
+    /* Styling For Main Text Back */
+
+.main-text-back{
+    font-size: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    margin-top: 20px;
+}
+.main-text-back a{
+    color: rgb(0, 110, 255);
+}
+.main-text-back a:hover {
+    text-decoration: underline;
+}
+
+
+
+

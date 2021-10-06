@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linkeng CSS Style Folder -->
+    <link rel="stylesheet" href="CSS/Smart-Input-Style.css">
+    <!-- Linkeng Font Awsome For Icos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- Linkeng iconscout.com For Use Icons In PJ -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/solid.css">
+    <title>Smart Input</title>
+</head>
+<body>
+    <section class="input-card-fleb">  
+        <!-- code for front card " Sing in "-->
+        <div class="head-sing_in">
+            <h1 class=sing_in-header>Sing In</h1>
+            <form action="#" class="user-name">
+                <input type="text" name="sing-in" placeholder="username" required>
+                <i class="uis uis-at icon-uis"></i>
+                <span class="cound">16</span>
+            </form>
+            <form action="#" class="password">
+                <input type="password" name="sing-in" placeholder="*******" required>
+                <div class="head-icon">
+                    <i class="uis uis-unlock-alt icon-password"></i>
+                </div>
+                <span class="cound-password">0</span>
+            </form>
+            <button type="submit" name="sing-in" class="btn-sing_in">
+                Sing In
+                <i class="uis uis-signout btn-icon"></i>
+            </button>
+            <div class="main-text-front">
+                <span>Don't have an account?</span>
+                <a href="#">Sing up</a>
+            </div>
+        </div>
+        <!-- code for back card " sing up" -->
+        <div class="back-sing_up">
+            <h1 class=sing_up-header>Sing up</h1>
+            <form action="#" class="back-user-name">
+                <input type="text" name="sing-up-username" placeholder="username" required>
+                <i class="uis uis-at back-icon-uis"></i>
+                <span class="back-cound">16</span>
+            </form>
+            <form action="#" class="back-email">
+                <input type="email" name="email-sing_up" placeholder="@example.com" required>
+                <i class="fas fa-envelope back-icon-email"></i>
+            </form>
+            <form action="#" class="back-password">
+                <input type="password" name="sing-in" placeholder="*******" required>
+                <div class="back-head-icon">
+                    <i class="uis uis-unlock-alt back-icon-password"></i>
+                </div>
+                <span class="back-cound-password">0</span>
+            </form>
+            <button type="submit" name="sing-up-password" class="btn-sing_up">
+                <span>Sing up</span>
+                <i class="uis uis-signout btn-icon"></i>
+            </button>
+            <div class="main-text-back">
+                <span>have an account?</span>
+                <a href="#">Sing in</a>
+            </div>
+        </div>
+    </section>
+  <script src="JS/Smart-Input.js"></script>  
+</body>
+</html>
